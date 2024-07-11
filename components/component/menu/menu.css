@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  /* --text-color: rgb(126, 87, 194); */
+  --text-color: yellowgreen;
+  --menu-color: #ffa75e;
+}
+* {
+  color: var(--text-color);
+}
+.menu-bar,
+.menu-overlay-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu-open p,
+.menu-close p {
+  color: var(--menu-color);
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  display: flex;
+  background-color: black;
+  z-index: 2;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-close-icon {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.menu-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2em;
+  z-index: 4;
+}
+.menu-preview {
+  flex: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.menu-close-icon {
+  font-size: 100px;
+  -webkit-text-stroke: 3px #ffa75e;
+  -webkit-text-fill-color: var(--menu-color);
+  line-height: 70%;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.menu-link-item-holder {
+  position: relative;
+}
+.menu-link-item-holder a {
+  color: var(--text-color);
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 85%;
+}
+.menu-link-item-holder a:hover {
+  color: var(--menu-color);
+}
+.menu-link-item-holder::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--text-color);
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+}
+.menu-link-item-holder:hover::before {
+  width: 100%;
+}
+.menu-info {
+  display: flex;
+  align-content: center;
+}
+.menu-info-col {
+  gap: 0;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+}
+.menu-info-col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
