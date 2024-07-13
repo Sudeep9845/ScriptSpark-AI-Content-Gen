@@ -1,23 +1,28 @@
 import { LandingPage } from "@/components/component/LandingPage";
-import { Button } from "@/components/ui/button";
+import AboutPage from "@/components/component/About/AboutPage";
+import { FeaturesSectionDemo } from "@/components/component/Featuresdir/FeaturesSectionDemo";
 import MainMenu from "@/components/component/menu/MainMenu";
 import Link from "next/link";
+import { SiteReview } from "@/components/component/SiteReview/SiteReview";
+import ContactUs from "@/components/component/ContactUs/ContactUs";
+import Footer from "@/components/component/Footer/Footer";
 
 export default function Home() {
   return (
     <>
-      <div className="h-screen w-scree z-0 overflow-hidden">
+      <div className="h-screen w-scree z-0 overflow-x-hidden overflow-y-scroll no-scrollbar">
         <LandingPage />
         <MainMenu />
-        <h2 className="text-xl text-white font-semibold text-center">
-          Hello Welcome to <br />
-          <span className="text-primary text-2xl font-bold">
-            Writizo an AI Content Generator Platform
-          </span>
-        </h2>
-        <Link href={"/dashboard"}>
-          <Button>Get Started</Button>
-        </Link>
+
+        <AboutPage />
+
+        <FeaturesSectionDemo />
+
+        <SiteReview />
+
+        <ContactUs />
+        <hr className="border-0 border-b-4 w-[100%] border-b-orange-400" />
+        <Footer />
       </div>
     </>
   );

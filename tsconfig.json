@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/component/menu/MainMenu.jsx"
+    "components/component/menu/MainMenu.jsx",
+    "app/dashboard/_components/Tick.jsx"
   ],
   "exclude": ["node_modules"]
 }

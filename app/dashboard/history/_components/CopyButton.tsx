@@ -7,7 +7,7 @@ function CopyButton({ aiResponse }: any) {
     <div>
       <Button
         variant="ghost"
-        className="text-primary"
+        className="h-full mt-4 px-4 py-3 bg-rose-400 text-zinc-100"
         onClick={() => navigator.clipboard.writeText(aiResponse)}
       >
         Copy

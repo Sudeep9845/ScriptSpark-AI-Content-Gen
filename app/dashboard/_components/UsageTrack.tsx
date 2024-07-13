@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { db } from "@/utils/db";
 import { AIOutput } from "@/utils/schema";
@@ -44,11 +45,11 @@ function UsageTrack() {
   };
   return (
     <div className="m-5">
-      <div className="bg-primary text-white p-3 rounded-lg">
+      <div className="bg-ora text-white p-3 rounded-lg">
         <h2 className="font-medium">Credits</h2>
-        <div className="h-2 bg-[#9981f9] w-full rounded-full mt-3 overflow-hidden">
+        <div className="h-2 bg-orange-400 w-full rounded-full mt-3 overflow-hidden">
           <div
-            className="h-2 bg-white rounded-full"
+            className="h-2 bg-white rounded-full "
             style={{
               width: (totalUsage / 10000) * 100 + "%",
             }}
@@ -56,9 +57,14 @@ function UsageTrack() {
         </div>
         <h2 className="text-sm my-2">{totalUsage}/20000 credit used</h2>
       </div>
-      <Button variant={"secondary"} className="w-full my-3 text-primary">
-        Upgrade
-      </Button>
+      <Link href={"/dashboard/billing"}>
+        <Button
+          variant={"secondary"}
+          className="w-full my-3 text-black bg-orange-400 hover:bg-orange-500 active:scale-75"
+        >
+          Upgrade
+        </Button>
+      </Link>
     </div>
   );
 }

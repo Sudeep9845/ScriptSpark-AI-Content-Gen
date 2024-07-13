@@ -10,7 +10,8 @@ export function FlipWord() {
     "Youtube Description",
     "Youtube Tags",
     "Instagram Hash Tag",
-    "Instagram Post/Reel Idea",
+    "Instagram Post",
+    "Reel Idea",
     "Code",
     "Tagline",
     "Product Description",
@@ -18,11 +19,12 @@ export function FlipWord() {
 
   return (
     <div className=" flex justify-center items-end px-4">
-      <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        Here, You can Think and Create
-        <FlipWords words={words} /> <br />
+      <div className="text-4xl mx-auto font-normal text-sky-300">
+        Explore and Create
+        <FlipWords words={words} className="stroke-lime-400" /> <br />
         with set of Robust and Powerful AI Tools
-        <br /> Provided by <span className="text-lime-400">`ScriptSpark`</span>
+        <br /> Provided by{" "}
+        <span className="stroke-lime-400">`ScriptSpark`</span>
       </div>
     </div>
   );

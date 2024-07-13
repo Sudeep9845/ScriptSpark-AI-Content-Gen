@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-
-
+import { dark } from "@clerk/themes";
 const outfit = Outfit({ subsets: ["latin"] });
 const spaceGortesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -18,8 +17,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+        variables: {
+          colorPrimary: "white",
+          colorText: "white",
+          colorTextSecondary: "grey",
+          colorBackground: "black",
+          fontSize: "text-2xl",
+        },
+      }}
+    >
+      <html lang="en" className="!scroll-smooth overflow-y-scroll no-scrollbar">
         <body className={spaceGortesk.className}>{children}</body>
       </html>
     </ClerkProvider>

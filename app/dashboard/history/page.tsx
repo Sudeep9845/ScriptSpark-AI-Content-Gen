@@ -33,11 +33,11 @@ async function History() {
     return template;
   };
   return (
-    <div className="m-5 p-5 border rounded-lg bg-white">
+    <div className="m-5 p-5 rounded-lg bg-zinc-950">
       <div className="flex justify-between items-center ">
         <div>
-          <h2 className="font-bold text-3xl">History</h2>
-          <p className="text-gray-500">
+          <h2 className="font-bold text-orange-400 text-3xl">History</h2>
+          <p className="text-sky-500">
             Search your previously generate AI content
           </p>
         </div>
@@ -45,7 +45,7 @@ async function History() {
           <RotateRefreshButton />
         </div>
       </div>
-      <div className="grid grid-cols-7 font-bold bg-secondary mt-5 py-3 px-3 ">
+      <div className="rounded-lg bg-zinc-800 text-sky-400 grid grid-cols-7 font-bold bg-secondary mt-5 py-3 px-3 ">
         <h2 className="col-span-2">TEMPLATE</h2>
         <h2 className="col-span-2">AI RESP</h2>
         <h2>DATE</h2>
@@ -54,8 +54,11 @@ async function History() {
       </div>
       {HistoryList.map((item: HISTORY, index: number) => (
         <>
-          <div key={index} className="grid grid-cols-7 my-5 py-3 px-3">
-            <h2 className="col-span-2 flex gap-2 items-center">
+          <div
+            key={index}
+            className="grid grid-cols-7 my-5 py-3 px-3 bg-zinc-800  rounded-lg "
+          >
+            <h2 className="col-span-2 flex gap-2 items-center text-lg text-lime-400 font-semibold">
               <Image
                 src={GetTemplateName(item?.templatesSlug)?.icon}
                 width={25}
@@ -64,9 +67,13 @@ async function History() {
               />
               {GetTemplateName(item.templatesSlug)?.name}
             </h2>
-            <h2 className="col-span-2 line-clamp-3 mr-3">{item?.aiResponse}</h2>
-            <h2>{item.createdAt}</h2>
-            <h2>{item?.aiResponse.length}</h2>
+            <h2 className="col-span-2 line-clamp-3 mr-3 text-orange-400">
+              {item?.aiResponse}
+            </h2>
+            <h2 className="h-full pt-6 text-zinc-100">{item.createdAt}</h2>
+            <h2 className="h-full pt-6 text-purple-400">
+              {item?.aiResponse.length}
+            </h2>
             <h2>
               <CopyButton aiResponse={item.aiResponse} />
             </h2>

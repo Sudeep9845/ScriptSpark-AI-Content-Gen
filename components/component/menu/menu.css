@@ -5,6 +5,7 @@
   /* --text-color: rgb(126, 87, 194); */
   --text-color: yellowgreen;
   --menu-color: #ffa75e;
+  --blue-color: skyblue;
 }
 * {
   color: var(--text-color);
@@ -15,7 +16,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 2em;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,12 +25,33 @@
 
 .menu-open p,
 .menu-close p {
+  position: relative;
   color: var(--menu-color);
   font-size: 25px;
   font-weight: 400;
   cursor: pointer;
   margin-bottom: 10px;
   margin-right: 10px;
+}
+.menu-open p:hover,
+.menu-close p:hover {
+  color: var(--text-color);
+}
+.menu-open p::before,
+.menu-close p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--blue-color);
+  z-index: -1;
+  transition: 0.2s ease-in-out;
+}
+.menu-open p:hover::before,
+.menu-close p:hover::before {
+  width: 100%;
 }
 
 .menu-overlay {
@@ -41,7 +63,7 @@
   padding: 2em;
   display: flex;
   background-color: black;
-  z-index: 2;
+  z-index: 90;
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 }
 
@@ -63,6 +85,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  color: var(--menu-color);
 }
 
 .menu-close-icon {
@@ -110,13 +133,24 @@
   align-content: center;
 }
 .menu-info-col {
+  color: var(--blue-color);
   gap: 0;
   flex-direction: column;
   flex: 1;
   justify-content: flex-end;
 }
+.menu-info-col a {
+  color: var(--blue-color);
+}
 .menu-info-col-1 {
+  color: var(--blue-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+.menu-info-col-1 p {
+  color: var(--blue-color);
+}
+.menu-preview p {
+  color: var(--menu-color);
 }

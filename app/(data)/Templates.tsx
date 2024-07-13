@@ -290,7 +290,7 @@ const Templates = [
   },
   {
     name: "Code Bug Detector",
-    desc: "This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions and alternatives in a straightforward, user-friendly way.",
+    desc: "This tool analyzes your input, like error messages and code snippets, to pinpoint and fix bugs, offering detailed solutions",
     icon: "https://cdn-icons-png.flaticon.com/128/8297/8297137.png",
     category: "code-bug-detector",
 

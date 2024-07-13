@@ -13,11 +13,11 @@ const RotateRefreshButton = () => {
 
   return (
     <div
-      className="rounded-md bg-zinc-200 p-2 cursor-pointer hover:shadow-md active:shadow-inner transition duration-300 transform hover:-translate-y-0.5 active:translate-y-0.5"
+      className="rounded-md bg-lime-400 p-2 cursor-pointer hover:shadow-md active:shadow-inner transition duration-300 transform hover:-translate-y-0.5 active:translate-y-0.5"
       onClick={handleClick}
     >
       <RotateCcw
-        className={`text-primary ${
+        className={`text-zinc-950 ${
           isAnimating ? "-rotate-180 ease-in-out duration-200" : ""
         }`}
       />

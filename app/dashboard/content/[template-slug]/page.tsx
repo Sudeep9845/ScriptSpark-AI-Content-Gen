@@ -101,9 +101,9 @@ const CreateContent = (props: PROPS) => {
     console.log(result);
   };
   return (
-    <div className=" p-5">
+    <div className=" p-5 ">
       <Link href={"/dashboard"}>
-        <Button>
+        <Button className="bg-zinc-700 hover:bg-zinc-800 active:scale-75">
           <ArrowLeft />
           Back
         </Button>

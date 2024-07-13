@@ -3,18 +3,20 @@ import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import "./menu.css";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import LogoImage from "./Logo";
 
 const menuLinks = [
-  { path: "/", label: "Home" },
-  { path: "/about-us", label: "About Us" },
-  { path: "/features", label: "Features" },
-  { path: "/contact", label: "Contact" },
+  { path: "#Home", label: "Home" },
+  { path: "#AboutUs", label: "About Us" },
+  { path: "#Features", label: "Features" },
+  { path: "#ContactUs", label: "Contact" },
   { path: "/dashboard", label: "Get Started" },
 ];
 const MainMenu = () => {
   const container = useRef();
+  const navBar = useRef(null);
   const tl = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toogleMenu = () => {
@@ -79,9 +81,10 @@ const MainMenu = () => {
       tl.current.reverse();
     }
   }, [isMenuOpen]);
+
   return (
-    <div className="menu-container" ref={container}>
-      <div className="menu-bar">
+    <div className="menu-container," ref={container}>
+      <div className="menu-bar" ref={navBar}>
         <div className="menu-logo pb-5">
           <Link href={"/"}>
             <LogoImage />
@@ -99,7 +102,7 @@ const MainMenu = () => {
             </Link>
           </div>
           <div className="menu-close" onClick={toogleMenu}>
-            <p>Close</p>
+            <p>Close &#x2198;</p>
           </div>
         </div>
         <div className="menu-close-icon" onClick={toogleMenu}>

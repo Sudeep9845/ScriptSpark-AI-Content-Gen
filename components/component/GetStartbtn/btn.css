@@ -1,0 +1,115 @@
+/* z-10 border-none bg-gradient-to-br from-orange-400 via-lime-300 to-sky-500 rounded-xl tracking-wide hover:tracking-widest hover:transition-transform hover:ease-linear mt-6 py-2 px-4 text-2xl font-semibold text-rose-500 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:border-2 border active:scale-9 */
+:root {
+  /* --text-color: rgb(126, 87, 194); */
+  --text-color: rgb(220, 254, 152);
+  --menu-color: #ffa75e;
+  --blue-color: skyblue;
+}
+.btn {
+  z-index: 10;
+  margin-top: 40px;
+}
+.btn:active {
+  transform: scale(0.85); /* Example of scaling effect */
+}
+.custom-btn {
+  width: 150px;
+  height: 40px;
+  color: var(--blue-color);
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(252, 239, 239, 0.1),
+    4px 4px 5px 0px rgba(251, 91, 91, 0.1);
+  outline: none;
+}
+.btn-8 {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--menu-color),
+    var(--blue-color)
+  );
+
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-8 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-8:before,
+.btn-8:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgb(253, 52, 99);
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+.btn-8:before {
+  height: 0%;
+  width: 3px;
+}
+.btn-8:after {
+  width: 0%;
+  height: 3px;
+}
+.btn-8:hover:before {
+  height: 100%;
+}
+.btn-8:hover:after {
+  width: 100%;
+}
+.btn-8:hover {
+  background: none;
+}
+.btn-8 span:hover {
+  color: rgb(121, 249, 121);
+}
+.btn-8 span:before,
+.btn-8 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgb(133, 249, 133);
+  /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+  transition: all 0.3s ease;
+}
+.btn-8 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-8 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-8 span:hover:before {
+  height: 100%;
+}
+.btn-8 span:hover:after {
+  width: 100%;
+}
+/* https: ; //codepen.io/yuhomyan/pen/OJMejWJ; */
+.btnspan {
+  color: rgb(253, 52, 99);
+  font-size: 20px;
+  letter-spacing: 1px;
+}

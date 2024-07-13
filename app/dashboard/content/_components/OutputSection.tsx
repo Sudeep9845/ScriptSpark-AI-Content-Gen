@@ -35,27 +35,30 @@ const OutputSection = ({ aiOutput }: PROPS) => {
   }, [aiOutput]);
 
   return (
-    <div className="bg-white shadow-lg border rounded-lg">
+    <div className="bg-zinc-950 shadow-lg border-2 rounded-lg text-white border-sky-400  shadow-sky-300">
       <div className="flex justify-between items-center p-5">
         <h2 className="font-medium text-lg">Your Result is Here😃</h2>
         <Button
-          className="flex gap-2"
+          className="flex gap-2 bg-rose-500 hover:bg-rose-600 active:scale-75"
           onClick={() => navigator.clipboard.writeText(aiOutput)}
         >
           <Copy className="w-4 h-4" />
           Copy
         </Button>
       </div>
-      <Editor
-        ref={editorRef}
-        initialValue="Your Result appears Here"
-        initialEditType="wysiwyg"
-        height="600px"
-        useCommandShortcut={true}
-        onChange={() =>
-          console.log(editorRef.current.getInstance().getMarkdown())
-        }
-      />
+      <div>
+        <Editor
+          ref={editorRef}
+          initialValue="Your Result appears Here"
+          initialEditType="wysiwyg"
+          height="500px"
+          theme="dark"
+          useCommandShortcut={true}
+          onChange={() =>
+            console.log(editorRef.current.getInstance().getMarkdown())
+          }
+        />
+      </div>
     </div>
   );
 };
