@@ -17,11 +17,11 @@ const AboutPage = () => {
           className="h-[50rem] border rounded-md"
         >
           The first priority of{" "}
-          <span className="text-blue-500">ScriptSpark</span> is to harness the
+          <span className="text-lime-400">ScriptSpark</span> is to harness the
           power of AI for your content needs. The second priority of ScriptSpark
           is to maximize productivity with real-time editing and a comprehensive
           history section. The third priority is to utilize the user-friendly{" "}
-          <span className="text-blue-500">ScriptSpark</span> dashboard to
+          <span className="text-lime-400">ScriptSpark</span> dashboard to
           streamline your workflow.
         </MaskContainer>
       </div>
