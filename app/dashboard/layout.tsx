@@ -18,7 +18,7 @@ export default function DashboardLayout({
         value={{ updateCreditUsage, setUpdateCreditUsage }}
       >
         <>
-          <div className="bg-zinc-950 min-h-screen overflow-y-scroll no-scrollbar">
+          <div className="bg-zinc-950 min-h-screen overflow-y-scroll no-scrollbar !scroll-smooth">
             <div className="md:w-64 hidden md:block fixed">
               <SideNav />
             </div>

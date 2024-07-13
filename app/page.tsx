@@ -1,3 +1,4 @@
+"use client";
 import { LandingPage } from "@/components/component/LandingPage";
 import AboutPage from "@/components/component/About/AboutPage";
 import { FeaturesSectionDemo } from "@/components/component/Featuresdir/FeaturesSectionDemo";
@@ -13,7 +14,6 @@ export default function Home() {
       <div className="h-screen w-scree z-0 overflow-x-hidden overflow-y-scroll no-scrollbar">
         <LandingPage />
         <MainMenu />
-
         <AboutPage />
 
         <FeaturesSectionDemo />

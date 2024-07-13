@@ -19,6 +19,7 @@ export const MaskContainer = ({
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState<any>({ x: null, y: null });
   const containerRef = useRef<any>(null);
+
   const updateMousePosition = (e: any) => {
     const rect = containerRef.current.getBoundingClientRect();
     setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top });
@@ -35,6 +36,7 @@ export const MaskContainer = ({
       }
     };
   }, []);
+
   let maskSize = isHovered ? revealSize : size;
 
   return (
@@ -44,6 +46,7 @@ export const MaskContainer = ({
       animate={{
         backgroundColor: isHovered ? "var(--slate-900)" : "var(--white)",
       }}
+      transition={{ type: "tween", duration: 0.5, ease: "linear" }}
     >
       <motion.div
         className="w-full h-full flex items-center justify-center text-6xl absolute bg-black bg-grid-white/[0.2] text-white [mask-image:url(/mask.svg)] [mask-size:40px] [mask-repeat:no-repeat]"
@@ -53,7 +56,7 @@ export const MaskContainer = ({
           }px`,
           WebkitMaskSize: `${maskSize}px`,
         }}
-        transition={{ type: "tween", ease: "easeIn", duration: 0.3 }}
+        transition={{ type: "tween", ease: "linear", duration: 0.5 }}
       >
         <div className="absolute inset-0 bg-black h-full w-full z-0 opacity-50" />
         <div
@@ -63,13 +66,13 @@ export const MaskContainer = ({
           onMouseLeave={() => {
             setIsHovered(false);
           }}
-          className="max-w-4xl mx-auto text-center text-white  text-4xl font-bold relative z-20"
+          className="max-w-4xl mx-auto text-center text-white text-4xl font-bold relative z-20"
         >
           {children}
         </div>
       </motion.div>
 
-      <div className="w-full h-full flex items-center justify-center  text-white">
+      <div className="w-full h-full flex items-center justify-center text-white">
         {revealText}
       </div>
     </motion.div>

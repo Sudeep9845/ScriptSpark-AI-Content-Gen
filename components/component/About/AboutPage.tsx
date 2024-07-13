@@ -14,7 +14,7 @@ const AboutPage = () => {
               AboutUs
             </p>
           }
-          className="h-[40rem] border rounded-md"
+          className="h-[60em] border rounded-md"
         >
           The first priority of{" "}
           <span className="text-lime-400">ScriptSpark</span> is to harness the
