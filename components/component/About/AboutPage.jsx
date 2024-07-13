@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <>
       <div
-        className="h-screen w-screen flex items-center justify-center overflow-hidden"
+        className="h-screen w-screen flex items-center justify-center overflow-hidden cursor-pointer"
         id="AboutUs"
       >
         <MaskContainer
@@ -14,7 +14,7 @@ const AboutPage = () => {
               AboutUs
             </p>
           }
-          className="h-[50rem] border rounded-md"
+          className="h-[40rem] border rounded-md"
         >
           The first priority of{" "}
           <span className="text-lime-400">ScriptSpark</span> is to harness the

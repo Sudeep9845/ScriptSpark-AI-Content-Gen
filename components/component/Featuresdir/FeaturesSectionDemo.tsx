@@ -9,7 +9,7 @@ export function FeaturesSectionDemo() {
         {grid.map((feature) => (
           <div
             key={feature.title}
-            className="relative bg-gradient-to-b dark:from-neutral-900 from-zinc-800 dark:to-neutral-950 to-lime-400 p-6 rounded-3xl overflow-hidden hover:shadow-lg hover:shadow-lime-300 hover:bg-rose-300 transition-all ease-in-out duration-100"
+            className="relative bg-gradient-to-b dark:from-neutral-900 from-zinc-800 dark:to-neutral-950 to-lime-400 p-6 rounded-3xl overflow-hidden hover:shadow-lg hover:shadow-lime-300 hover:bg-rose-300 transition-all ease-in-out duration-100 cursor-pointer"
           >
             <Grid size={20} />
             <p className=" text-orange-400 font-semibold text-3xl relative z-12">
