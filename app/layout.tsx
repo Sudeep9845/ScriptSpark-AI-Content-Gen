@@ -3,6 +3,7 @@ import { Outfit, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import MyPage from "./_app";
 const outfit = Outfit({ subsets: ["latin"] });
 const spaceGortesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en" className="!scroll-smooth overflow-y-scroll no-scrollbar">
+        <MyPage />
         <body className={spaceGortesk.className}>{children}</body>
       </html>
     </ClerkProvider>
